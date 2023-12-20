@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-image: linear-gradient(300deg, #e1ffe9, #c8e4ff, #fbffe6);
+}
+
+.todo-div {
+  width: 400px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  overflow: hidden;
+}
+
+.todo-div h1 {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+form input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  width: 100%;
+}
+
+form input::placeholder {
+  color: #c6c6c6;
+}
+
+form button {
+  margin-left: 8px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+}
+
+form button:hover {
+  color: #000;
+  animation: anim 0.3s linear;
+}
+
+form button:active {
+  transform: scale(0.9);
+}
+
+.todos {
+  margin-top: 20px;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.todos::-webkit-scrollbar {
+  display: none;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.todo p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin-right: 8px;
+}
+
+.todo i {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff6e6e;
+  cursor: pointer;
+}
+
+.todo i:hover {
+  color: #000;
+}
+
+.todo i:active {
+  transform: scale(0.9);
+}
+
+.my-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 300;
+}
+
+.my-info p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #555;
+}
+
+.my-info a {
+  font-size: 14px;
+  font-weight: 600;
+  color: transparent;
+  background-image: linear-gradient(300deg, #6200ff, #ff00b3, #ff0000);
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: text;
+  text-decoration: none;
+}
+
+.my-info a:hover {
+  color: #000;
+}
+
+.my-info a:active {
+  transform: scale(0.9);
+}
+
+@keyframes anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
